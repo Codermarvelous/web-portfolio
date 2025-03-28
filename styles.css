@@ -7,40 +7,84 @@
 
 body {
     font-family: Arial, sans-serif;
-    font-size: 50px;
+    font-size: 1.6rem; /* Base font size using rem for scalability */
     background-color: #f4f4f4;
     color: #333;
     line-height: 1.6;
-    background-image: url('https://img.freepik.com/premium-vector/abstract-green-watercolor-gradient-vector-background-light-texture-pattern-design-pastel-color-wallpaper-bright-graphic-illustration-modern-doodle-shape-nature-background-creative-template_548264-227.jpg');
+    background-image: url('https://example.com/path-to-your-image.jpg');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
 }
 
 header {
-    background-color: rgb(33, 99, 35);
+    background-color: #2d6925;
     color: white;
     text-align: center;
     padding: 30px 0;
-    font-family: cursive;
 }
 
 header h1 {
-    font-size: 3em;
+    font-size: 2.5rem; /* Font size in rem */
     margin-bottom: 10px;
 }
 
 header .tagline {
-    font-size: 1.2em;;
+    font-size: 1.5rem; /* Font size in rem */
+}
+
+/* Media queries for responsive design */
+@media (max-width: 1200px) {
+    body {
+        font-size: 1.4rem; /* Slightly smaller font size for large tablets and small desktops */
+    }
+    header h1 {
+        font-size: 2.2rem;
+    }
+    header .tagline {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 1.2rem; /* Smaller font size for tablets */
+    }
+    header h1 {
+        font-size: 1.8rem;
+    }
+    header .tagline {
+        font-size: 1.2rem;
+    }
+
+    section {
+        font-size: 1.4rem; /* Adjust font size for text in sections */
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 1rem; /* Smaller font size for mobile devices */
+    }
+    header h1 {
+        font-size: 1.6rem;
+    }
+    header .tagline {
+        font-size: 1rem;
+    }
+
+    section {
+        font-size: 1.2rem; /* Adjust font size for text in sections */
+    }
 }
 
 section {
     padding: 20px;
     margin: 20px;
-    background-color: #d6f7ced8;
+    background-color: #d5ffdcec;
     border-radius: 8px;
     opacity: 0; /* Initially hide the section */
-    transform: translateX(-100px); /* Move sections off-screen */
+    transform: translateY(100px); /* Move sections off-screen (start from bottom) */
     transition: opacity 1s ease-in-out, transform 1s ease-in-out;
 }
 
@@ -56,7 +100,7 @@ section {
 }
 
 h2 {
-    color: #296d26;
+    color: #4CAF50;
     margin-bottom: 15px;
 }
 
@@ -65,7 +109,7 @@ h2 {
 }
 
 .project h3 {
-    color: #3a87d4ee;
+    color: #2C3E50;
 }
 
 #skills ul {
@@ -78,7 +122,7 @@ h2 {
 }
 
 a {
-    color: #316b33;
+    color: #4CAF50;
     text-decoration: none;
 }
 
@@ -89,7 +133,7 @@ a:hover {
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #174b19;
+    background-color: #265a2f;
     color: white;
     margin-top: 20px;
 }
@@ -109,7 +153,7 @@ footer {
 }
 
 #contact a {
-    color: #1f6421;
+    color: #4CAF50;
 }
 
 #contact a:hover {
