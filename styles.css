@@ -11,7 +11,7 @@ body {
     background-color: #f4f4f4;
     color: #333;
     line-height: 1.6;
-    background-image: url('https://example.com/path-to-your-image.jpg');
+    /* background-image: url('https://example.com/path-to-your-image.jpg'); */
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -33,49 +33,22 @@ header .tagline {
     font-size: 1.5rem; /* Font size in rem */
 }
 
-/* Media queries for responsive design */
-@media (max-width: 1200px) {
-    body {
-        font-size: 1.4rem; /* Slightly smaller font size for large tablets and small desktops */
-    }
-    header h1 {
-        font-size: 2.2rem;
-    }
-    header .tagline {
-        font-size: 1.4rem;
-    }
+/* Additional styling for the navigation bar */
+nav {
+    position: absolute;
+    top: 10px;
+    right: 20px;
 }
 
-@media (max-width: 768px) {
-    body {
-        font-size: 1.2rem; /* Smaller font size for tablets */
-    }
-    header h1 {
-        font-size: 1.8rem;
-    }
-    header .tagline {
-        font-size: 1.2rem;
-    }
-
-    section {
-        font-size: 1.4rem; /* Adjust font size for text in sections */
-    }
+nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
 }
 
-@media (max-width: 480px) {
-    body {
-        font-size: 1rem; /* Smaller font size for mobile devices */
-    }
-    header h1 {
-        font-size: 1.6rem;
-    }
-    header .tagline {
-        font-size: 1rem;
-    }
-
-    section {
-        font-size: 1.2rem; /* Adjust font size for text in sections */
-    }
+nav a:hover {
+    color: #007BFF;
 }
 
 section {
@@ -83,25 +56,6 @@ section {
     margin: 20px;
     background-color: #d5ffdcec;
     border-radius: 8px;
-    opacity: 0; /* Initially hide the section */
-    transform: translateY(100px); /* Move sections off-screen (start from bottom) */
-    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
-}
-
-/* Add animation classes for when the section comes into view */
-.animate-roll {
-    opacity: 0;
-    transform: translateY(100px); /* Move from bottom */
-}
-
-.animate-roll.visible {
-    opacity: 1;
-    transform: translateY(0); /* Roll in */
-}
-
-h2 {
-    color: #4CAF50;
-    margin-bottom: 15px;
 }
 
 .project {
@@ -112,13 +66,12 @@ h2 {
     color: #2C3E50;
 }
 
-#skills ul {
-    list-style: none;
-    padding-left: 0;
-}
-
-#skills li {
-    margin-bottom: 10px;
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #265a2f;
+    color: white;
+    margin-top: 20px;
 }
 
 a {
@@ -128,14 +81,6 @@ a {
 
 a:hover {
     text-decoration: underline;
-}
-
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #265a2f;
-    color: white;
-    margin-top: 20px;
 }
 
 #nature-sports {
@@ -158,4 +103,127 @@ footer {
 
 #contact a:hover {
     text-decoration: underline;
+}
+
+/* Animation classes */
+.animate-roll {
+    opacity: 0;
+    transform: translateY(100px); /* Move from bottom */
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.animate-roll.visible {
+    opacity: 1;
+    transform: translateY(0); /* Roll in */
+}
+
+/* Media queries for responsive design */
+@media (max-width: 1200px) {
+    body {
+        font-size: 1.4rem;
+    }
+    header h1 {
+        font-size: 2.2rem;
+    }
+    header .tagline {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 1.2rem;
+    }
+    header h1 {
+        font-size: 1.8rem;
+    }
+    header .tagline {
+        font-size: 1.2rem;
+    }
+
+    section {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 1rem;
+    }
+    header h1 {
+        font-size: 1.6rem;
+    }
+    header .tagline {
+        font-size: 1rem;
+    }
+
+    section {
+        font-size: 1.2rem;
+    }
+}
+.certificate {
+    margin-bottom: 20px;
+}
+
+.certificate h3 {
+    font-size: 1.6rem;
+    color: #333;
+}
+#about{
+    margin-top: 1em;
+}
+/* General styles for the projects */
+.project {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.project-content {
+    flex: 1;
+    padding: 20px;
+    max-width: 60%;  /* Adjust content width */
+}
+
+.project-image {
+    flex: 0 0 auto;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.project-image img {
+    width: 450px; /* Adjust width as needed */
+    height: 250px; /* Adjust height as needed */
+    object-fit: cover; /* Ensures the image covers the area */
+}
+
+/* Position the image to the left */
+.project-image.left {
+    order: -1; /* Move image to the left side */
+}
+
+/* Position the image to the right */
+.project-image.right {
+    order: 1; /* Keep image on the right side */
+}
+
+/* Ensure the content is not too small on smaller screens */
+@media (max-width: 768px) {
+    .project {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-content {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .project-image {
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 20px;
+    }
 }

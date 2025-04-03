@@ -5,33 +5,93 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ayaan's E Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        nav {
+    margin-top: 6em; /* Add margin to push nav below the header */
+    text-align: center; /* Center the navigation items */
+}
+
+nav a {
+    margin-left: 20px;
+    margin-right: 20px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #007BFF;
+}
+
+
+        header {
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        header .tagline {
+            font-size: 1.5rem;
+        }
+
+        /* Styles for main sections */
+        section {
+            padding: 20px;
+            margin: 20px;
+            background-color: #d5ffdcec;
+            border-radius: 8px;
+        }
+
+        .project {
+            margin-bottom: 15px;
+        }
+
+        .project h3 {
+            color: #2C3E50;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #265a2f;
+            color: white;
+            margin-top: 20px;
+        }
+
+        a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
+    
+
     <header>
         <h1>Ayaan's E Portfolio</h1>
         <p class="tagline">Electronics and Telecommunication Engineer</p>
     </header>
-
+    <nav>
+        <!-- <a href="#about">About</a> -->
+        <!-- <a href="#projects">Projects</a> -->
+        <!-- <a href="#skills">Skills</a> -->
+        <a href="education.html" target="_blank">Education</a>
+        <a href="certifications.html" target="_blank">Certifications</a>
+        <a href="achievements.html" target="_blank">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
     <section id="about" class="animate-roll">
         <h2>About Me</h2>
         <p>Hello, I am Ayaan Ansari, an Electronics and Telecommunication Engineer. I'm dedicated to improving my skills and learning new technologies to make a difference in the field of electronics. I strive to stay innovative and creative in my work.</p>
     </section>
 
-    <section id="projects" class="animate-roll">
-        <h2>My Projects</h2>
-        <div class="project">
-            <h3>Piezoelectric Voltage Generation</h3>
-            <p>This project involves generating voltage using piezoelectric materials, which can be used for low-power applications. It was developed as part of my first-year coursework.</p>
-        </div>
-        <div class="project">
-            <h3>Solar-Based Water Distillation</h3>
-            <p>In this project, I built a solar-powered water distillation system, aiming to purify water using renewable energy sources.</p>
-        </div>
-        <div class="project">
-            <h3>Arduino-Based AQI Monitor</h3>
-            <p>This project involves creating an air quality index (AQI) monitor using Arduino, which helps in determining the air quality of the surrounding environment.</p>
-        </div>
-    </section>
 
     <section id="skills" class="animate-roll">
         <h2>My Skills</h2>
@@ -42,11 +102,6 @@
             <li>HTML</li>
             <li>CSS</li>
         </ul>
-    </section>
-
-    <section id="resume" class="animate-roll">
-        <h2>Download My Resume</h2>
-        <a href="path_to_your_resume.pdf" target="_blank">Click here to download my resume</a>
     </section>
 
     <section id="nature-sports" class="animate-roll">
